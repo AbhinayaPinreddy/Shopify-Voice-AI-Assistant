@@ -41,21 +41,23 @@ Intent Detection & Answer Extraction
 Text-to-Speech Response
 
 
-#  Project Structure
+##  Project Structure
 
+```
 shopify_voice_ai/
 │
 ├── scripts/
 │   ├── rag_query.py
 │   ├── hf_stt.py
 │   ├── hf_tts.py
-│   ├── chunk_data.py
-│   ├── build_faiss.py
+│   └── chunk_data.py
 │
-├── shopify_data.json         (example file)
+├── build_faiss.py
+├── shopify_data.json   # example file
 ├── requirements.txt
 ├── README.md
-├── .gitignore
+└── .gitignore
+```
 
 
 ---
