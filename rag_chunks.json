@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Cotton Kurta",
+    "type": "product",
+    "content": "Product name: Cotton Kurta\nPrice: \u20b9500.00\nAvailable sizes: S, M, L, XL\nDescription: 100 percent pure cotton kurta suitable for daily wear and summer comfort.\nMaterial: Pure Cotton\nColor: White\nWash Care: Machine wash cold."
+  },
+  {
+    "title": "Silk Saree",
+    "type": "product",
+    "content": "Product name: Silk Saree\nPrice: \u20b92000.00\nAvailable sizes: Free Size\nDescription: Premium silk saree perfect for festive occasions and weddings.\nMaterial: Silk\nColor: Red\nWash Care: Dry clean only."
+  },
+  {
+    "title": "Denim Jacket",
+    "type": "product",
+    "content": "Product name: Denim Jacket\nPrice: \u20b91500.00\nAvailable sizes: M, L, XL\nDescription: Stylish blue denim jacket suitable for casual wear.\nMaterial: Denim\nColor: Blue\nWash Care: Machine wash."
+  },
+  {
+    "title": "Sports T-Shirt",
+    "type": "product",
+    "content": "Product name: Sports T-Shirt\nPrice: \u20b9800.00\nAvailable sizes: S, M, L\nDescription: Breathable sports t-shirt ideal for workouts and outdoor activities.\nMaterial: Polyester\nColor: Black\nWash Care: Machine wash."
+  },
+  {
+    "title": "Shipping Policy",
+    "type": "page",
+    "content": "Shipping Policy: We deliver products within 5 to 7 business days. Free shipping is available for orders above \u20b9999."
+  },
+  {
+    "title": "Return Policy",
+    "type": "page",
+    "content": "Return Policy: Customers can return products within 7 days of delivery. The item must be unused and in original packaging."
+  },
+  {
+    "title": "Contact Us",
+    "type": "page",
+    "content": "Contact Information: You can reach us at support@shopifydemo.com or call +91 9876543210 during business hours."
+  }
+]
