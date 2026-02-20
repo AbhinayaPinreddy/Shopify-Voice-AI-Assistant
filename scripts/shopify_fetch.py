@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # -------------------------
 # CONFIG
@@ -91,7 +94,7 @@ for page in pages_raw:
 # Step 4: Save data for RAG
 all_data = products + pages
 
-with open("shopify_data.json", "w", encoding="utf-8") as f:
+with open(os.path.join(SCRIPT_DIR, "shopify_data.json"), "w", encoding="utf-8") as f:
     json.dump(all_data, f, ensure_ascii=False, indent=2)
 
 print(" Shopify data fetched successfully")

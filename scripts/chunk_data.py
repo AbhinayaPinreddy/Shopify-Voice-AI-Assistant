@@ -1,5 +1,7 @@
 import json
+import os
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 CHUNK_SIZE = 500  # larger chunks for structured data
 
 def chunk_text(text, size=CHUNK_SIZE):
@@ -10,7 +12,7 @@ def chunk_text(text, size=CHUNK_SIZE):
         start += size
     return chunks
 
-with open("shopify_data.json", "r", encoding="utf-8") as f:
+with open(os.path.join(SCRIPT_DIR, "shopify_data.json"), "r", encoding="utf-8") as f:
     data = json.load(f)
 
 chunks = []
@@ -24,7 +26,7 @@ for item in data:
             "content": chunk
         })
 
-with open("rag_chunks.json", "w", encoding="utf-8") as f:
+with open(os.path.join(SCRIPT_DIR, "rag_chunks.json"), "w", encoding="utf-8") as f:
     json.dump(chunks, f, indent=2)
 
 print("Chunking complete. Total chunks:", len(chunks))
