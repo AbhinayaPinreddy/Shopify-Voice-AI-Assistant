@@ -1,19 +1,21 @@
 import json
+import os
 import faiss
 import numpy as np
-import time
 from sentence_transformers import SentenceTransformer
 from hf_stt import listen
 from hf_tts import speak
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Load chunked data
-with open("rag_chunks.json", "r", encoding="utf-8") as f:
+with open(os.path.join(SCRIPT_DIR, "rag_chunks.json"), "r", encoding="utf-8") as f:
     data = json.load(f)
 
 texts = [item["content"] for item in data]
 
 # Load FAISS
-index = faiss.read_index("faiss.index")
+index = faiss.read_index(os.path.join(SCRIPT_DIR, "faiss.index"))
 
 # Load embedding model
 model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -25,10 +27,10 @@ speak(welcome)
 while True:
     question = listen()
 
-    if not question:
+    if not question or not question.strip():
         continue
 
-    question = question.lower()
+    question = question.strip().lower()
     print("User:", question)
 
     if "exit" in question:
@@ -72,4 +74,3 @@ while True:
 
     print("Answer:", answer)
     speak(answer)
-    time.sleep(0.5)

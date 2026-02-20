@@ -1,9 +1,12 @@
 import json
+import os
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-with open("rag_chunks.json", "r", encoding="utf-8") as f:
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+with open(os.path.join(SCRIPT_DIR, "rag_chunks.json"), "r", encoding="utf-8") as f:
     data = json.load(f)
 
 texts = [item["content"] for item in data]
@@ -15,6 +18,6 @@ dimension = embeddings.shape[1]
 index = faiss.IndexFlatL2(dimension)
 index.add(np.array(embeddings))
 
-faiss.write_index(index, "faiss.index")
+faiss.write_index(index, os.path.join(SCRIPT_DIR, "faiss.index"))
 
 print("FAISS index built successfully.")

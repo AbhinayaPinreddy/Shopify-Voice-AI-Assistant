@@ -1,0 +1,23 @@
+# Virtual environments
+.venv/
+.venv
+venv
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated artifacts (built from source, not to be committed)
+*.index
+
+
+# Environment variables / secrets
+.env
+
+# Logs
+*.log
+
+# Duplicate requirements file
+requirement.txt
