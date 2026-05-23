@@ -156,4 +156,7 @@ You can ask:
 Developed as an AI-based Shopify Voice Assistant project using Retrieval-Augmented Generation (RAG).
 
 ---
+This project was created in collaboration with [Superteams.ai](https://superteams.ai).
+
+The collaboration involved contributing technical content, sharing insights, and building projects/blogs focused on learning, innovation, and community engagement in the tech ecosystem.
 
